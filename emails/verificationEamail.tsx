@@ -7,7 +7,7 @@ interface EmailTemplateProps {
 export function EmailTemplate({ firstName }: EmailTemplateProps) {
   return (
     <div>
-      <h1>Welcome, {firstName}!</h1>
+      <h1>Welcome, {firstName}</h1>
     </div>
   );
 }
