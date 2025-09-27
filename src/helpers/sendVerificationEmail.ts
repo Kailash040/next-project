@@ -7,7 +7,9 @@ username:string,
 verifyCode:string
 ): Promise<ApiResponse> {
 try{
-
+return {
+    success:false, message:" verification email send successfully"
+}
 }catch(emailError){
 console.log("error in sending email",emailError);
 return {
