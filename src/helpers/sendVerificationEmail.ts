@@ -7,8 +7,14 @@ username:string,
 verifyCode:string
 ): Promise<ApiResponse> {
 try{
+    await resend.emails.send({
+        from:"you@example.com",
+        to:"user@gmail.com",
+        subject:"Verify your email",
+        react: <Email url="https://example.com" />,
+    })
 return {
-    success:false, message:" verification email send successfully !"
+    success:true, message:" verification email send successfully !"
 }
 }catch(emailError){
 console.log("error in sending email",emailError);
