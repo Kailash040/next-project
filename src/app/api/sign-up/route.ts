@@ -1,0 +1,21 @@
+import dbConnect from "@/lib/dbConnect";
+import UserModel from "@/model/User";
+import bcrypt from "bcryptjs";
+import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
+import { success } from "zod";
+
+export async function POST(request: Request) {
+    await dbConnect();
+    try{
+ const {username,email,password}= await request.json();
+ 
+    }catch(error){
+        console.log(error,"error registed user")
+        return Response.json({
+            success:false,
+            message:"error in registering user"
+        },
+   { status:500}
+    )
+    }
+}
