@@ -8,10 +8,10 @@ verifyCode:string
 ): Promise<ApiResponse> {
 try{
     await resend.emails.send({
-        from:"you@example.com",
-        to:"user@gmail.com",
-        subject:"Verify your email",
-        react: <Email url="https://example.com" />,
+        from:"onboarding@resend.dev",
+        to:email,
+        subject:"Mystery message | Verification code",
+        react: VerficcationEmail,
     })
 return {
     success:true, message:" verification email send successfully !"
